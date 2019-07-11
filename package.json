@@ -1,0 +1,23 @@
+{
+  "name": "stockexplorer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaun3141/StockExplorer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaun3141/StockExplorer/issues"
+  },
+  "homepage": "https://github.com/shaun3141/StockExplorer#readme",
+  "dependencies": {
+    "intrinio-sdk": "^4.0.0",
+    "line-reader": "^0.4.0"
+  }
+}
