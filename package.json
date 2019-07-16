@@ -18,6 +18,8 @@
   "homepage": "https://github.com/shaun3141/StockExplorer#readme",
   "dependencies": {
     "intrinio-sdk": "^4.0.0",
-    "line-reader": "^0.4.0"
+    "line-reader": "^0.4.0",
+    "longjohn": "^0.2.12",
+    "request": "^2.88.0"
   }
 }

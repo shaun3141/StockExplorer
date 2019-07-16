@@ -1,6 +1,6 @@
 const https = require("https");
 const IntrinioSDK = require('intrinio-sdk');
-IntrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = process.env.INTRINIO_SANDBOX_KEY;
+IntrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = process.env.INTRINIO_PRODUCTION_KEY;
 
 var securityAPI = new IntrinioSDK.SecurityApi();
 
@@ -35,7 +35,6 @@ exports.getRatings = async function(ticker, daysAgo) {
     };
 
     securityAPI.getSecurityZacksAnalystRatings(ticker, opts).then(function(data) {
-      console.log("here1");
       resolve(data);
     }, function(error) {
       reject(error);
@@ -50,7 +49,7 @@ exports.makeRequest = function(endpoint, key) {
         method: "GET",
         host: "api-v2.intrinio.com",
         // path: `/companies/AAPL?api_key=OjdlZGY1OWUzNGRiMzlmMTA0MzE5MTQ1YmU5NGQxM2E1`
-        path: `${endpoint}?api_key=${key}}`
+        path: `${endpoint}?api_key=${key}`
       }, function(response) {
         let json = "";
         response.on('data', function (chunk) {
